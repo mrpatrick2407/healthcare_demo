@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <header class="header">
+    <button routerLink="/appointment" class="btn-appointment">
+      Make an appointment
+      <mat-icon
+          class="mat-icon"
+          svgIcon="doctor"
+          aria-hidden="false"
+          aria-label="Example thumbs up SVG icon"
+        ></mat-icon>
+    </button>
+    <div class="profile">
+      <div class="image">
+        <img src="https://i.pravatar.cc/150?img=26" />
+        <div class="notification"></div>
+      </div>
+
+      <select>
+        <option value="Maria waters">Maria Waters</option>
+      </select>
+    </div>
+  </header>
+  <aside class="aside">
+    <ul>
+      <li class="logo hide">
+        <a routerLink="home"
+          ><img
+            src="https://ozcanzaferayan.github.io/healthcare-dashboard/img/logo.png"
+            alt="logo"
+            width="25"
+        /></a>
+      </li>
+      <button routerLink="/symptoms" mat-fab matTooltip="Symptoms Checker" matTooltipPosition="right"  class="active mat-blue">
+        <mat-icon
+          class="mat-icon"
+          svgIcon="cancel"
+          aria-hidden="false"
+          aria-label="Example thumbs up SVG icon"
+        ></mat-icon>
+      </button>
+      <button mat-fab routerLink="/prescriptions"  matTooltip="Pharmacy
+      " matTooltipPosition="right"   class="active mat-blue">
+        <mat-icon
+          class="mat-icon"
+          svgIcon="medical"
+          aria-hidden="false"
+          aria-label="Example thumbs up SVG icon"
+        ></mat-icon>
+      </button>
+      <button mat-fab routerLink="contact"   matTooltip="Contact Us" matTooltipPosition="right"  class="active mat-blue">
+        <mat-icon
+          class="mat-icon"
+          svgIcon="contact"
+          aria-hidden="false"
+          aria-label="Example thumbs up SVG icon"
+        ></mat-icon>
+      </button>
+      
+      
+    </ul>
+  </aside>
+  <body>
+    <router-outlet></router-outlet>
+  </body>
+</div>

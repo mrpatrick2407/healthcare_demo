@@ -1,0 +1,50 @@
+<header>
+    <!-- Add a search bar using Angular Material -->
+    <mat-form-field  class="search-bar">
+        <input  name="search" [(ngModel)]="search" matInput placeholder="Search for medicines">
+    </mat-form-field>
+</header>
+
+<main>
+    <!-- Add filters using Angular Material -->
+    <mat-card>
+        <mat-card-content>
+            <h2>Filters</h2>
+            <mat-checkbox (change)="filter()" [(ngModel)]="prescription">Prescription Required</mat-checkbox>
+            <mat-checkbox (change)="filter()"  [(ngModel)]="counter" >Over-the-Counter</mat-checkbox>
+            <mat-select (selectionChange)="filter()"  [(ngModel)]="category" placeholder="Category">
+                <mat-option value="All">All Categories</mat-option>
+                <mat-option value="Pain Relief">Pain Relief</mat-option>
+                <mat-option value="Cold and Flu">Cold & Flu</mat-option>
+            </mat-select>
+        </mat-card-content>
+    </mat-card>
+
+    <!-- Display medicine cards using Angular Material -->
+    <div class="mat-card"   >
+    <mat-card class="mat-card-hover" *ngFor="let medicine of filteredmedicines|filter:search"  >
+        <img mat-card-image src="{{ medicine.image }}" alt="{{ medicine.name }}">
+        <mat-card-header>
+            <div mat-card-avatar class="avatar"></div>
+            <mat-card-title>{{ medicine.name }}</mat-card-title>
+            <mat-card-subtitle>{{ medicine.category }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="medicine-card-content">
+            <div class="medicine-description">
+                <p>Description :{{ medicine.description }}</p>
+            </div>
+            <div class="medicine-price">
+                <p>Price: Rs.{{ medicine.price }}</p>
+            </div>
+            <mat-card-actions>
+                <!-- <button class="addtocart" mat-button >Add to Cart</button> -->
+                <button mat-raised-button style="background-color: #314459;color:white" type="submit">Add to Cart</button>
+            
+            </mat-card-actions>
+        </mat-card-content>
+        
+        
+    </mat-card>
+</div>
+</main>
+

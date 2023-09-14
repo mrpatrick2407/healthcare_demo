@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --jaggedice:#C2E8E5 ;
+  --tealblue: #314459;
+}
+
+.mat-select-panel {
+    z-index: 1050; /* You can adjust this value as needed */
+  }
+  
+  /* Position the dropdown within the off-canvas */
+  .mat-select-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .cdk-global-overlay-wrapper, .cdk-overlay-container {
+    z-index: 99999 !important;
+  }
+
+  .cdk-overlay-pane{
+    z-index: 99999 !important;
+  }

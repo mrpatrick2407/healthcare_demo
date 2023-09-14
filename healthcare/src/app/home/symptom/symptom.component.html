@@ -1,0 +1,143 @@
+<button
+  mat-raised-button
+  (click)="addSymptom()"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#offcanvasRight"
+  aria-controls="offcanvasRight"
+  class="button"
+>
+  Add Symptom
+</button>
+
+<button
+  mat-raised-button
+  (click)="analyze()"
+  style="background-color: var(--tealblue); color: #fff"
+>
+  Analyze
+</button>
+
+<div style="margin-top: 2%" fxLayout="row" fxLayoutGap="20px">
+  <div fxFlex="50">
+    <mat-label>Selected Features</mat-label>
+    <div *ngIf="selectedFeatures.length === 0" class="empty-message">
+      <p>Please add Symptoms</p>
+    </div>
+    <div
+      style="padding-bottom: 3%"
+      *ngFor="let feature of selectedFeatures; let i = index"
+    >
+      <mat-card>
+        <mat-card-header class="mat-card-title">
+          <mat-card-title>{{ feature.category }} </mat-card-title>
+        </mat-card-header>
+        <mat-card-actions class="mat-card-actions">
+          <div>
+            {{ feature.laytext }}.
+            <span style="text-shadow: 0px 0px white">{{
+              feature.choiceText ==''
+                ? feature.choiceNumber
+                : feature.choiceText
+            }}</span>
+          </div>
+
+          <button
+            (click)="delete(i)"
+            mat-icon-button
+            style="position: absolute; right: 0px; top: 0px"
+          >
+            <mat-icon
+              class="mat-icon"
+              svgIcon="cancel"
+              aria-hidden="false"
+              aria-label="Example thumbs up SVG icon"
+            ></mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <div style="height: 500px;" fxFlex="50">
+   
+    <p-chart [options]="options" type="doughnut" [height]="'100%'"  [data]="chartdata"></p-chart>
+  </div>
+</div>
+
+<!--Off Canvas-->
+<div
+  class="offcanvas offcanvas-end"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Add Symptom</h5>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <form [formGroup]="symptomFormGroup" *ngIf="showForm">
+      <mat-form-field
+        *ngIf="
+          this.symptomFormGroup.get('selectedSymptom')?.value === '' ||
+          this.symptomFormGroup.get('selectedSymptom')?.value === null
+        "
+        class="formGroup"
+      >
+        <input formControlName="searchTxt" matInput placeholder="search" />
+        <mat-select class="mat-select-panel" formControlName="selectedSymptom">
+          <mat-option
+            id="test"
+            *ngFor="let symptom of symptoms | search : searchstring"
+            [value]="symptom"
+          >
+            {{ symptom.text }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div *ngIf="this.symptomFormGroup.get('selectedSymptom')">
+        {{
+          this.symptomFormGroup.get("selectedSymptom")?.value?.laytext ??
+            this.symptomFormGroup.get("selectedSymptom")?.value?.text
+        }}
+      </div>
+      <ng-container *ngIf="this.symptomFormGroup.get('selectedSymptom')">
+        <mat-form-field *ngIf="isNumericType()">
+          <input
+            matInput
+            [placeholder]="
+              this.symptomFormGroup.get('selectedSymptom')?.value.laytext ??
+              this.symptomFormGroup.get('selectedSymptom')?.value?.text
+            "
+            formControlName="numerical"
+            type="number"
+          />
+        </mat-form-field>
+
+        <mat-form-field *ngIf="isCategoricalType()">
+          <mat-select placeholder="Select" formControlName="categorical">
+            <mat-option
+              *ngFor="
+                let choice of this.symptomFormGroup.get('selectedSymptom')
+                  ?.value.choices
+              "
+              [value]="choice.value"
+            >
+              {{ choice.text }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </ng-container>
+
+      <button mat-raised-button color="primary" (click)="submitForm()">
+        Add Symptom
+      </button>
+    </form>
+    
+  </div>
+</div>
+

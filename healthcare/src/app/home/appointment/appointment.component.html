@@ -1,0 +1,92 @@
+<div class="background ">
+  <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()" class="appointment-form" fxLayout="column" fxLayoutGap="20px">
+    <h2 class="form-title">Appointment Form</h2>
+    <div fxLayout="row" fxLayoutGap="20px">
+      <mat-form-field fxFlex="50">
+        <input matInput formControlName="name" placeholder="Name">
+      </mat-form-field>
+  
+      <mat-form-field fxFlex="50">
+        <input matInput formControlName="email" type="email" placeholder="Email">
+      </mat-form-field>
+      
+    </div>
+  
+   <div fxLayout="row" fxLayoutGap="20px">
+    <mat-form-field fxFlex="50" class="mat-form-field">
+      <input matInput formControlName="phoneNumber" placeholder="Phone Number">
+    </mat-form-field>
+    <mat-form-field fxFlex="50">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option *ngFor="let gender of genders" [value]="gender.value">
+          {{gender.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field fxFlex="50" class="mat-form-field">
+      <input matInput [matDatepicker]="dobPicker" formControlName="dob" placeholder="Date of Birth">
+      <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+      <mat-datepicker #dobPicker></mat-datepicker>
+    </mat-form-field>
+   </div>
+    <div formGroupName="address">
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Address </mat-panel-title>
+          </mat-expansion-panel-header>
+  
+          <div  fxLayout="row wrap" fxLayoutAlign="start" class="grid-container">
+            <div fxFlex="50%" fxLayout="column" fxLayoutGap="20px">
+              <mat-form-field>
+                <mat-label>Address Line 1</mat-label>
+                <input matInput formControlName="guestAddress" placeholder="Address">
+              </mat-form-field>
+          
+              <mat-form-field>
+                <mat-label>Address Line 3</mat-label>
+                <input matInput formControlName="guestCountry" placeholder="Address Country">
+              </mat-form-field>
+            </div>
+          
+            <div fxFlex="50%" fxLayout="column" fxLayoutGap="20px">
+              <mat-form-field>
+                <mat-label>Address Line 2</mat-label>
+                <input matInput formControlName="guestCity" placeholder="Address City">
+              </mat-form-field>
+          
+              <mat-form-field>
+                <mat-label>Address Line 4</mat-label>
+                <input matInput formControlName="guestZipCode" placeholder="Address Zip Code">
+              </mat-form-field>
+            </div>
+          </div>
+          
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <mat-form-field class="mat-form-field">
+      <input matInput [matDatepicker]="picker" formControlName="appointmentDate" placeholder="Appointment Date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  
+    <mat-form-field class="mat-form-field">
+      <textarea matInput formControlName="reason" placeholder="Reason for Appointment"></textarea>
+    </mat-form-field>
+    <mat-label>Have you previously consulted a doctor for the cause?</mat-label>
+    <mat-radio-group formControlName="consultedDoctor" aria-label="Select an option">
+      <mat-radio-button value="Yes">Yes</mat-radio-button>
+      <mat-radio-button value="No">No</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field class="mat-form-field">
+      <textarea matInput formControlName="previousCondition" placeholder="Description"></textarea>
+    </mat-form-field>
+    
+    <div class="button-container">
+      <button mat-raised-button style="background-color: #314459;color:white" type="submit">Submit</button>
+    </div>
+  </form>
+  
+</div>

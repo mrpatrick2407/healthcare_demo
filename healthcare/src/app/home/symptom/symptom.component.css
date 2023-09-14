@@ -1,0 +1,51 @@
+.mat-select-panel {
+    z-index: 1050; /* You can adjust this value as needed */
+  }
+  
+  /* Position the dropdown within the off-canvas */
+  .mat-select-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .cdk-global-overlay-wrapper, .cdk-overlay-container {
+    z-index: 99999 !important;
+  }
+
+  .button{
+    margin-right:20px ;
+  }
+  .cdk-overlay-pane{
+    z-index: 99999 !important;
+  }
+  .mat-card-title{
+    background-color:var(--jaggedice);
+    border-radius: 3%;
+  }
+  
+  
+  .mat-card-actions div {
+    font-size: 16px;
+    text-shadow: 0px 0px black;
+  }
+  
+  .empty-message {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the message horizontally */
+  }
+  
+  .empty-message p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+
+  

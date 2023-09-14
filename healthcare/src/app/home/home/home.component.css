@@ -1,0 +1,601 @@
+/* Variables */
+:root {
+    --font-stack: 'Open Sans', Helvetica, sans-serif;
+    --media-phone: 400px;
+    --spacing-xxxl: 3rem;
+    --spacing-xxl: 2.5rem;
+    --spacing-xl: 2rem;
+    --spacing-l: 1.5rem;
+    --spacing: 1rem;
+    --spacing-xs: .75rem;
+    --spacing-xxs: .5rem;
+    --spacing-xxxs: .3rem;
+    --spacing-xxxxs: .1rem;
+    --font-xxxl: 2.5rem;
+    --font-xxl: 2rem;
+    --font-xl: 1.5rem;
+    --font-l: 1.25rem;
+    --font: 1rem;
+    --font-s: .9rem;
+    --font-xs: .8rem;
+    --font-xxs: .75rem;
+    --font-xxxs: .7rem;
+    --bg: #fcfdfd;
+    --bg-100: #edf1fb;
+    --bg-200: #26254f;
+    --primary: #7e7fe8;
+    --text: #0c0a3d;
+    --text-1: #fff;
+    --text-2: #9594ae;
+    --success: #16c08f;
+    --danger: #ff7d7d;
+    --info: #758dff;
+    --gray: #bbbbca;
+  }
+  
+  /* Styles */
+ /* Variables */
+/* ... (variables like $font-stack, $spacing-xxxl, etc.) ... */
+
+/* Base styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    overflow-y: hidden;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: var(--font-stack);
+    color: var(--text);
+    margin-top: 2em;
+    margin-left: 2em;
+    box-shadow: 5px 5px 5px #C2E8E5;
+    background: #FFF;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.05);
+    padding: 2rem
+}
+
+input {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+
+input {
+    font-family:var(--font-stack);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray)
+}
+
+/* ... (other base styles) ... */
+
+/* Wrapper */
+.wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 7.5rem 1fr;
+    grid-template-columns: 6.5rem 1fr;
+    grid-template-areas:
+        "aside header"
+        "aside main";
+    flex-wrap: wrap;
+    overflow-y: hidden;
+
+    background-color: #EEE;
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        grid-template-columns: initial;
+        grid-template-rows: initial;
+    }
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    background-color: #314459;
+    box-shadow: 0px 9px 50px #314459;
+    padding: 1rem; /* Assuming $spacing is defined as 1rem */
+}
+
+.header .btn-appointment {
+    padding: 1rem 2rem; /* Assuming $spacing and $spacing-l are both defined as 1rem and $spacing-xxs is defined as 0.1rem */
+    border-radius: 0.2rem; /* Assuming $spacing-xxs is defined as 0.1rem */
+    height: fit-content;
+    color: rgba(0,0,0,.8); /* Assuming $text-1 refers to white color */
+    background: rgb(147, 149, 237);
+    background:#C2E8E5;
+    font-weight: 600;
+    border:1px solid #C2E8E5;
+    transition: all .3s;
+}
+.header .btn-appointment:hover {
+    box-shadow: 0 0 5px #C2E8E5,
+    0 0 10px #C2E8E5,
+    0 0 20px #C2E8E5;
+   
+}
+
+.header .profile {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem; /* Assuming $spacing is defined as 1rem */
+}
+
+.header .profile .image {
+    justify-self: end;
+}
+
+.header .profile .image img {
+    width: 4rem; /* Assuming $size is defined as 4rem */
+    height: 4rem; /* Assuming $size is defined as 4rem */
+    border-radius: 4rem; /* Assuming $size is defined as 4rem */
+}
+
+.header .profile .image img {
+    width: 4rem; /* Assuming $size is defined as 4rem */
+    height: 4rem; /* Assuming $size is defined as 4rem */
+    border-radius: 4rem; /* Assuming $size is defined as 4rem */
+}
+
+.header .profile .image .notification {
+    width: 1.25rem; /* Assuming $size is defined as 1.25rem */
+    height: 1.25rem; /* Assuming $size is defined as 1.25rem */
+    margin-top: -1.7rem;
+    margin-left: 3rem;
+    background-color: #ff7d7d; /* Assuming $danger refers to red color */
+    border-radius: 1.25rem; /* Assuming $size is defined as 1.25rem */
+    box-shadow: 0px 0px 10px 0px rgba(255, 125, 125, 1);
+}
+.mat-blue {
+    background-color: var(--tealblue);
+    color: whitesmoke;
+    transition: all .5s;
+  }
+.mat-blue:hover {
+    background-color: var(--jaggedice);
+    color: var(--tealblue);
+    box-shadow: 0 0 5px #C2E8E5,
+    0 0 10px #C2E8E5,
+    0 0 20px #C2E8E5;
+  }
+.header select {
+    height: fit-content;
+    border: none;
+    background: none;
+    font-size: 1rem; /* Assuming $font is defined as 1rem */
+    font-weight: 600;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+
+/* Aside */
+.aside {
+    grid-area: aside;
+    display: grid;
+    gap: 1.5rem; /* Assuming $spacing-l is defined as 1.5rem */
+    padding: 1rem; /* Assuming $spacing is defined as 1rem */
+    justify-content: center;
+    font-size: 1.5rem; /* Assuming $font-xl is defined as 1.5rem */
+    color: #bbbbca; /* Assuming $gray is defined as #bbbbca */
+    background-color: #314459; /* Assuming $bg is defined as #fcfdfd */
+     box-shadow:5px 0px 5px  #314459;
+}
+
+@media screen and (max-width: 400px) {
+    .aside {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #f1f1f1;
+        justify-content: initial;
+    }
+}
+
+.aside ul {
+    display: grid;
+    grid-template-rows: repeat(8, min-content);
+    gap: 3rem;
+    margin-top: 0.75rem; /* Assuming $spacing-xs is defined as 0.75rem */
+}
+
+@media screen and (max-width: 400px) {
+    .aside ul {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: none;
+        margin-top: 0;
+    }
+}
+
+.aside ul .li {
+    display: grid;
+    place-items: center;
+    padding: 0.1rem 0.75rem; /* Assuming $spacing-xxs and $spacing-xs are defined as 0.1rem and 0.75rem */
+}
+
+.aside ul .li.active {
+    background-color: #fff; /* Assuming $text-1 refers to white color */
+    box-shadow: 0px 0px 33px -10px rgba(126, 127, 232, 0.5);
+    border-radius: 0.1rem; /* Assuming $spacing-xs is defined as 0.1rem */
+}
+
+.aside ul .li.active a {
+    color: #7e7fe8; /* Assuming $primary is defined as #7e7fe8 */
+}
+
+.aside ul .logo img {
+    width: 3rem;
+}
+
+.aside ul .logo a {
+    color: #fff; /* Assuming $text-1 refers to white color */
+    text-align: center;
+    font-size: 1.25rem; /* Assuming $font-l is defined as 1.25rem */
+}
+
+
+/* Main */
+.main {
+    padding: 5rem; /* Assuming $spacing-xxxl is defined as 3rem */
+    grid-area: main;
+    background-color: #000; /* Assuming $bg-100 is defined as #edf1fb */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid black;
+    gap: 2.5rem; /* Assuming $spacing-xl is defined as 2.5rem */
+}
+
+@media screen and (max-width: 1148px) {
+    .main {
+        grid-template-rows: initial;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main {
+        padding: 1rem 0 6rem 0; /* Assuming $spacing is defined as 1rem */
+        gap: 1rem; /* Assuming $spacing is defined as 1rem */
+    }
+}
+
+.main .top {
+    display: grid;
+    grid-template-columns: 5fr 8fr;
+    gap: 2.5rem; /* Assuming $spacing-xl is defined as 2.5rem */
+}
+
+@media screen and (max-width: 1148px) {
+    .main .top {
+        grid-template-columns: initial;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main .top {
+        gap: 1rem; /* Assuming $spacing is defined as 1rem */
+    }
+}
+
+.main .bottom {
+    display: grid;
+    gap: 2.5rem; /* Assuming $spacing-xl is defined as 2.5rem */
+    grid-template-columns: 4.2fr 3.8fr 5.2fr;
+}
+
+@media screen and (max-width: 1148px) {
+    .main .bottom {
+        grid-template-columns: initial;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main .bottom {
+        gap: 1rem; /* Assuming $spacing is defined as 1rem */
+    }
+}
+
+.main .card {
+    background-color: #fff; /* Assuming $text-1 refers to white color */
+    border-radius: 0.1rem; /* Assuming $spacing-xxxs is defined as 0.1rem */
+    padding: 2.5rem; /* Assuming $spacing-xl is defined as 2.5rem */
+}
+
+.main .card .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem; /* Assuming $spacing-l is defined as 1.5rem */
+}
+
+.main .card .card-header .right {
+    color: #bbbbca; /* Assuming $gray is defined as #bbbbca */
+}
+
+.main .card .card-header h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.25rem; /* Assuming $font-l is defined as 1.25rem */
+}
+
+.main .card .card-header .header-container {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 1rem; /* Assuming $spacing is defined as 1rem */
+    align-items: end;
+}
+
+.main .card .card-header .header-container span {
+    color: #bbbbca; /* Assuming $gray is defined as #bbbbca */
+    position: absolute;
+    margin-left: 9rem;
+    margin-top: 0.3rem; /* Assuming $spacing-xs is defined as 0.3rem */
+}
+
+.main .card .card-header select {
+    height: fit-content;
+    border: none;
+    background: none;
+    font-size: 1rem; /* Assuming $font is defined as 1rem */
+    font-weight: 600;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.main .card .card-body {
+    display: grid;
+    gap: 2.5rem; /* Assuming $spacing-xl is defined as 2.5rem */
+}
+
+.main .card .appointment {
+    display: grid;
+    grid-template-columns: min-content max-content 1fr min-content min-content;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+        "profile name name check times"
+        "profile title title check times"
+        "profile date time check times";
+    column-gap: 2.5rem; /* Assuming $spacing-l is defined as 2.5rem */
+    row-gap: 0;
+}
+
+.main .card .appointment .image {
+    grid-area: profile;
+    width: 4rem; /* Assuming $size is defined as 4rem */
+    height: 4rem; /* Assuming $size is defined as 4rem */
+    border-radius: 4rem; /* Assuming $size is defined as 4rem */
+    box-shadow: 5px 5px 22px 0px rgba(116, 204, 214, 0.5);
+}
+
+.main .card .appointment .image.gray {
+    box-shadow: 5px 5px 22px 0px rgba(199, 197, 210, 1);
+}
+
+.main .card .appointment .image.red {
+    box-shadow: 5px 5px 22px 0px rgba(193, 68, 84, 0.5);
+}
+
+.main .card .appointment .name {
+    grid-area: name;
+    font-weight: 600;
+}
+
+.main .card .appointment .title {
+    grid-area: title;
+    font-size: 0.8rem; /* Assuming $font-xs is defined as 0.8rem */
+    color: #9695af;
+}
+
+.main .card .appointment .date {
+    grid-area: date;
+    font-size: 0.8rem; /* Assuming $font-xs is defined as 0.8rem */
+    color: #758dff; /* Assuming $info is defined as #758dff */
+}
+
+.main .card .appointment .time {
+    grid-area: time;
+    font-size: 0.8rem; /* Assuming $font-xs is defined as 0.8rem */
+    color: #758dff; /* Assuming $info is defined as #758dff */
+}
+
+.main .card .appointment .check {
+    grid-area: check;
+    font-size: 2rem; /* Assuming $font-xxl is defined as 2rem */
+    align-self: center;
+    color: #758dff; /* Assuming $info is defined as #758dff */
+}
+
+.main .card .appointment .times {
+    grid-area: times;
+    font-size: 2rem; /* Assuming $font-xxl is defined as 2rem */
+    align-self: center;
+    color: #e74c3c; /* Assuming $danger is defined as #e74c3c */
+}
+
+.main .card .chart-container {
+    height: 17rem;
+}
+
+@media screen and (max-width: 650px) {
+    .main .card .chart-container {
+        height: 10rem;
+    }
+}
+
+.main .card .news-list .news {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-areas: "title arrow" "subtitle arrow";
+    gap: 0.1rem 0.5rem; /* Assuming $spacing-xxs and $spacing-xxs are defined as 0.1rem and 0.5rem */
+}
+
+.main .card .news-list .news .title {
+    grid-area: title;
+    font-weight: 700;
+    color: #333; /* Assuming $text refers to black color */
+}
+
+.main .card .news-list .news .subtitle {
+    grid-area: subtitle;
+    color: #666; /* Assuming $text-2 refers to gray color */
+}
+
+.main .card .news-list .news .fa-caret-right {
+    grid-area: arrow;
+    align-self: center;
+}
+
+.main .card .news-list hr {
+    width: 100%;
+    border: none;
+    background-color: #ccc; /* Assuming $gray is defined as #ccc */
+    height: 1px;
+}
+
+.main .card .news-list .more {
+    text-align: center;
+}
+
+.main .card .news-list .more a {
+    color: #7e7fe8; /* Assuming $primary is defined as #7e7fe8 */
+    font-weight: bold;
+}
+
+.main .card.alert {
+    background: linear-gradient(90deg, rgba(147, 149, 237, 1) 0%, #6c6de3 100%);
+    color: #fff; /* Assuming $text-1 refers to white color */
+}
+
+.main .current-prescription-container {
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    gap: 2.5rem; /* Assuming $spacing-xl is defined as 2.5rem */
+}
+
+.main .current-prescription-container ul {
+    display: grid;
+    row-gap: 0.75rem; /* Assuming $spacing-xs is defined as 0.75rem */
+}
+
+
+/* ... (other styles) ... */
+.prescription-item {
+    display: grid;
+    grid-template-areas:
+        "dot title"
+        "dot description";
+    grid-template-columns: min-content 1fr;
+    column-gap: 1.5rem; /* Assuming $spacing-l is defined as 1.5rem */
+}
+
+.prescription-item .dot {
+    grid-area: dot;
+    width: 1.5rem; /* Assuming $size is defined as 1.5rem */
+    height: 1.5rem; /* Assuming $size is defined as 1.5rem */
+    border-radius: 1.5rem; /* Assuming $size is defined as 1.5rem */
+    align-self: center;
+}
+
+.prescription-item .dot.gray {
+    background-color: #bccbf5;
+    box-shadow: 2px 2px 10px 0px #bccbf5;
+}
+
+.prescription-item .dot.violet {
+    background-color: #7e7fe8; /* Assuming $primary is defined as #7e7fe8 */
+    box-shadow: 2px 2px 10px 0px #7e7fe8; /* Assuming $primary is defined as #7e7fe8 */
+}
+
+.prescription-item .title {
+    grid-area: title;
+    color: #333; /* Assuming $text refers to black color */
+    font-weight: 800;
+}
+
+.prescription-item .description {
+    grid-area: description;
+}
+
+/* Notifications */
+.notifications ul {
+    display: grid;
+    gap: 1.5rem; /* $spacing-l */
+}
+
+.notifications .more {
+    text-align: center;
+}
+
+.notifications .more a {
+    color: #7e7fe8; /* Assuming $primary is defined as #7e7fe8 */
+    font-weight: 600;
+}
+
+.notifications .notification {
+    display: grid;
+    grid-template-areas:
+        "dot title date";
+    grid-template-columns: min-content 1fr max-content;
+    align-items: center;
+    gap: 1rem; /* Assuming $spacing is defined as 1rem */
+}
+
+.notifications .notification .dot {
+    grid-area: dot;
+    width: 0.75rem; /* Assuming $spacing-xs is defined as 0.75rem */
+    height: 0.75rem; /* Assuming $spacing-xs is defined as 0.75rem */
+    border-radius: 0.75rem; /* Assuming $spacing-xs is defined as 0.75rem */
+}
+
+.notifications .notification .dot.green {
+    background-color: #16c08f; /* Assuming $success is defined as #16c08f */
+}
+
+.notifications .notification .dot.red {
+    background-color: #ff7d7d; /* Assuming $danger is defined as #ff7d7d */
+}
+
+.notifications .notification .dot.blue {
+    background-color: #7e7fe8; /* Assuming $primary is defined as #7e7fe8 */
+}
+
+.notifications .notification .title {
+    grid-area: title;
+    color: #333; /* Assuming $text refers to black color */
+    font-weight: 600;
+}
+
+.notifications .notification .date {
+    grid-area: date;
+}

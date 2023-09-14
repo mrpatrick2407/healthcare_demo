@@ -1,0 +1,28 @@
+<div class="modal-overlay">
+  <div class="modal-content">
+    <ng-container *ngIf="data.message.includes('Successfully')">
+      <h2 class="success-dialog-title">Success!</h2>
+      <div class="success-dialog-content">
+        <p class="success-message">{{ data.message }}</p>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="data.message.includes('Invalid')">
+      <h2 class="error-dialog-title">Error!</h2>
+      <div class="error-dialog-content">
+        <p class="error-message">{{ data.message }}</p>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="data.message.includes('wrong')">
+      <h2 class="error-dialog-title">Error!</h2>
+      <div class="error-dialog-content">
+        <p class="error-message">{{ data.message }}</p>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="data.message.toLowerCase().includes('error')">
+      <h2 class="error-dialog-title">Error!</h2>
+      <div class="error-dialog-content">
+        <p class="error-message">{{ data.message }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

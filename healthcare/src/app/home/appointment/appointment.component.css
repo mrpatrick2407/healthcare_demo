@@ -1,0 +1,33 @@
+.appointment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+     background: rgba(255, 255, 255, 0.2); /* Adjust transparency here */
+    backdrop-filter: blur(5px); 
+  }
+  
+  .mat-form-field {
+    width: 100%; /* Set the width to 100% */
+  }
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .background{
+    background-image: url(https://img.freepik.com/free-photo/indian-doctor-receives-patient-tells-him-about-results-tests-medicine-health_496169-2765.jpg?w=996&t=st=1694073264~exp=1694073864~hmac=1c2a7735630456a05dc29e4e5555e1fea43f90a6da1e23396f94d33f9c1db6fa);
+  background-repeat: no-repeat;
+  background-position-x:center;
+  background-size: 100%;
+  }
+  .background2{
+    background-image: url(https://img.freepik.com/free-vector/online-doctor-concept-illustration_114360-1831.jpg?w=740&t=st=1694073112~exp=1694073712~hmac=a97c3dbf5cd2325fc657578df65630bece5e9877bcf23daa034ceab1484039de);
+  background-repeat: no-repeat;
+  background-position-x:103%;
+  }

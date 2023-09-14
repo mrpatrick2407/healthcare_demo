@@ -1,0 +1,45 @@
+.mat-card{
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 25%));
+    grid-gap: 2%;
+}
+/* Add this to your CSS stylesheet */
+/* Add this to your CSS stylesheet */
+.mat-card-hover {
+    transition: all 0.3s;
+    transform: scale(1); /* Start with no scaling */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer; /* Add a shadow for depth */
+}
+
+.mat-card-hover:hover {
+    transform: scale(1.05); /* Zoom in slightly on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Increase shadow for the lifting effect */
+}
+
+
+.search-bar{
+    width: 100%;
+}
+/* Add this to your CSS stylesheet */
+.medicine-card-content {
+    background-color: #f0f0f0; /* Set the background color */
+    padding: 16px; /* Add some padding for spacing */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.medicine-description {
+    font-size: 18px; /* Set the font size */
+    color: #333; /* Set the text color */
+}
+
+.medicine-price {
+    font-size: 16px; /* Set the font size for price */
+    color: #ff5722; /* Set a different color for price */
+}
+.addtocart{
+    background-color: var(--tealblue);
+    color: white;
+}

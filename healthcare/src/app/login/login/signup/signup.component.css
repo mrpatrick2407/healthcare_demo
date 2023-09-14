@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap');
+
+
+
+/* Styling for the links */
+.text-center a {
+  color: #2196F3; /* Set the link color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Add smooth color transition on hover */
+}
+/* Hide both horizontal and vertical scrollbars */
+body {
+  overflow-y: hidden;
+}
+
+/* If you only want to hide the vertical scrollbar */
+body {
+  overflow-y: hidden;
+}
+
+/* If you only want to hide the horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+.text-center a:hover {
+  color: #0d47a1; /* Set a different color on hover */
+}
+
+.fullscreen {
+    width: 55vw;
+    height: 49.3vw;
+    position: relative; /* To position the background absolutely */
+    overflow: hidden;
+    top: -10px;
+    left: -16px; /* Hide overflow to prevent the background from showing outside */
+  }
+  .highlight {
+    color: #FFD700; 
+    font-size: 5vh;/* Prominent color for the word "humanity" */
+  }
+  body{
+    background-color:#314459; 
+    height: 49.3vw;
+ overflow: hidden;
+
+  }
+.text{
+    font-family: 'Montserrat', sans-serif;
+    z-index: 999;
+    top: 40px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 4px 4px 2px black
+}
+.text2{
+    font-family: 'Poppins', sans-serif;
+    z-index: 999;
+    top: 10vh; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    /* text-shadow: 2px 2px 10px black */
+}
+.signup{
+  position:absolute;
+  right:8rem
+}
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ overflow: hidden;
+    background-color:#314459;  /* Example gradient colors */
+    /* Adjust the opacity to your liking */
+  }
+  .clouds {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   
+  }
+  /* Adjust the size of the form fields */
+.mat-form-field {
+  width: 220%; /* Set the desired width */
+  height: 120%px; 
+  position:relative;
+  left:-63%;
+
+  /* Set the desired height */
+}
+
+/* Adjust font size and padding within the form fields */
+.mat-form-field input {
+  width: 120%; /* Set the desired width */
+  height: 100%px; 
+  padding: 2%;
+  padding: 0%;
+ /* Set the desired padding */
+}
+
+  .container{
+    position: absolute;
+    top:0px;
+    right:0px;
+    background-color: #C2E8E5;
+    border: 1px solid black;
+    z-index: 0;
+    height: 49vw;
+    width: 45vw;
+ overflow: hidden;
+ box-shadow: 5px 0px 0px 5px 10px black;
+ border-radius: 5%  0%  0% 5%;
+  }
+  .container2{
+    max-width: 450px;
+   position: relative;
+   top:100px;
+    max-height: 400px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding around the content */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    background-color: #f5f5f5; /* Set a background color for the container */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); 
+    backface-visibility: hidden;
+  }
+  .cloud {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background-image: url("762506_SeoCloud_01__-01-removebg-preview.png");
+    background-size: cover;
+    transform: scale(5);
+  }
+  .example-container{
+    padding: 5px;
+  }
+  @keyframes floatClouds {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(900%);
+    }
+  }
+  @keyframes floatClouds4 {
+    0% {
+      transform: translateX(-200%) scale(2);
+    }
+    100% {
+      transform: translateX(900%);
+    }
+  }
+  @keyframes floatClouds5 {
+    0% {
+      transform: translateX(-200%) scale(1.5);
+    }
+    100% {
+      transform: translateX(900%);
+    }
+  }
+  
+  /* Adjust the positions of individual clouds */
+  .cloud:nth-child(1) {
+    left: 10%;
+    top: 35%;
+    animation: floatClouds 5s linear infinite;
+   
+  }
+  
+  .cloud:nth-child(2) {
+    left: -10%;
+    top: 40%;
+    animation: floatClouds 7s linear infinite;
+    
+  }
+  
+  .cloud:nth-child(3) {
+    left: -10%;
+    top: 60%;
+    animation: floatClouds 10s linear infinite;
+  }
+  .cloud:nth-child(4){
+    left:-10%;
+    top:25%;
+    animation: floatClouds4 9s linear infinite;
+   
+  }
+  .cloud:nth-child(5){
+    left:-10%;
+    top:74%;
+    animation: floatClouds5 14s linear infinite;
+   
+  }
+  .meditator {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+ 
+  .credits {
+    margin-top: 50px;
+    font-family: monospace;
+  }
+  
+  .credits a {
+    color: #2196F3;
+  }
+  
+  .instructions {
+    font-family: monospace;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    max-height: 90%;
+    max-width: 90%;
+  }
+  #shade{
+    background: black
+  }
+
+  #meditate {
+    width: 300px;
+    height: auto;
+  }
+  
+  #meditate #dude {
+    transition: transform 0.4s;
+  }
+  
+  #meditate #shade {
+    transition: transform 0.4s;
+  }
+  
+  #meditate #dude {
+    transform-origin: center;
+    animation: dude 4s linear infinite;
+  }
+  
+  #meditate #dude-outer {
+    transform-origin: center;
+    animation: dude-outer 2s linear infinite;
+  }
+  
+  #meditate #dude-outer-outer {
+    transform-origin: center;
+    animation: dude-outer-outer 4s linear infinite;
+  }
+  
+  #meditate #shade {
+    transform: translate(21px, 1px);
+    animation: shade 4s linear infinite;
+  }
+  
+  @keyframes dude-outer-outer {
+    0% {
+      transform: rotate(3deg);
+    }
+    20% {
+      transform: none;
+    }
+    50% {
+      transform: rotate(-3deg);
+    }
+    70% {
+      transform: none;
+    }
+    100% {
+      transform: rotate(3deg);
+    }
+  }
+  
+  @keyframes dude-outer {
+    0% {
+      transform: none;
+    }
+    20% {
+      transform: translateY(25px);
+    }
+    50% {
+      transform: none;
+    }
+    70% {
+      transform: translateY(-25px);
+    }
+    100% {
+      transform: none;
+    }
+  }
+  
+  @keyframes dude {
+    0% {
+      transform: none;
+    }
+    20% {
+      transform: translateX(100px);
+    }
+    50% {
+      transform: none;
+    }
+    70% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: none;
+    }
+  }
+  
+  @keyframes shade {
+    0% {
+      transform: none;
+    }
+    20% {
+      transform: translateX(100px);
+    }
+    50% {
+      transform: none;
+    }
+    70% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: none;
+    }
+  }
+  
