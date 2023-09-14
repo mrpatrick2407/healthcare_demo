@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "name": "Advil",
+    "description": "Over-the-counter pain reliever and fever reducer.",
+    "price": 10.99,
+    "image": "https://i.imgur.com/oX2s4fT.jpg",
+    "category": "Pain Relief"
+  },
+  {
+    "id": 2,
+    "name": "Tylenol",
+    "description": "Over-the-counter pain reliever and fever reducer.",
+    "price": 9.99,
+    "image": "https://i.imgur.com/5h4l4iX.jpg",
+    "category": "Pain Relief"
+  },
+  {
+    "id": 3,
+    "name": "Aleve",
+    "description": "Over-the-counter pain reliever and fever reducer.",
+    "price": 11.99,
+    "image": "https://i.imgur.com/yOD788n.jpg",
+    "category": "Pain Relief"
+  },
+  {
+    "id": 4,
+    "name": "Zyrtec",
+    "description": "Over-the-counter allergy medication.",
+    "price": 12.99,
+    "image": "https://i.imgur.com/3w1a54m.jpg",
+    "category": "Allergies"
+  },
+  {
+    "id": 5,
+    "name": "Benadryl",
+    "description": "Over-the-counter allergy medication.",
+    "price": 10.99,
+    "image": "https://i.imgur.com/2722n7k.jpg",
+    "category": "Allergies"
+  },
+  {
+    "id": 6,
+    "name": "Claritin",
+    "description": "Over-the-counter allergy medication.",
+    "price": 11.99,
+    "image": "https://i.imgur.com/h068d4k.jpg",
+    "category": "Allergies"
+  },
+  {
+    "id": 7,
+    "name": "Nexium",
+    "description": "Over-the-counter heartburn medication.",
+    "price": 19.99,
+    "image": "https://i.imgur.com/8o73n42.jpg",
+    "category": "Heartburn"
+  },
+  {
+    "id": 8,
+    "name": "Prilosec",
+    "description": "Over-the-counter heartburn medication.",
+    "price": 17.99,
+    "image": "https://i.imgur.com/sZ2f7Q9.jpg",
+    "category": "Heartburn"
+  },
+  {
+    "id": 9,
+    "name": "Pepcid",
+    "description": "Over-the-counter heartburn medication.",
+    "price": 15.99,
+    "image": "https://i.imgur.com/1356t60.jpg",
+    "category": "Heartburn"
+  },
+  {
+    "id": 10,
+    "name": "Tums",
+    "description": "Over-the-counter antacid.",
+    "price": 7.99,
+    "image": "https://i.imgur.com/m4e7j32.jpg",
+    "category": "Antacids"
+  },
+  {
+    "id": 11,
+    "name": "Ibuprofen",
+    "description": "Over-the-counter pain reliever and fever reducer.",
+    "price": 8.99,
+    "image": "https://i.imgur.com/6s46m1b.jpg",
+    "category": "Pain Relief"
+  },
+  {
+    "id": 12,
+    "name": "Naproxen",
+    "description": "Over-the-counter pain reliever and fever reducer.",
+    "price": 9.99,
+    "image": "https://i.imgur.com/5o4a9sM.jpg",
+    "category": "Pain Relief"
+  },
+  {
+    "id": 13,
+    "name": "Excedrin",
+    "description": "Over-the-counter pain reliever and fever reducer.",
+    "price": 10.99,
+    "image": "https://i.imgur.com/6578520.jpg",
+    "category": "Pain Relief"
+  },
+  {
+    "id": 14,
+    "name": "DayQuil",
+    "description": "Over-the-counter cold and flu medicine.",
+    "price": 12.99,
+    "image": "https://i.imgur.com/k82f57f.jpg",
+    "category": "Cold and Flu"
+  },
+  {
+    "id": 15,
+    "name": "NyQuil",
+    "description": "Over-the-counter cold and flu medicine.",
+    "price": 13.99,
+    "image": "https://i.imgur.com/k0u663o.jpg",
+    "category": "Cold and Flu"
+  },
+  {
+    "id": 16,
+    "name": "Robitussin",
+    "description": "Over-the-counter cough and cold medicine.",
+    "price": 11.99,
+    "image": "https://i.imgur.com/u3s34cL.jpg",
+    "category": "Cough and Cold"
+  },
+  {
+    "id": 17,
+    "name": "Mucinex",
+    "description": "Over-the-counter cough and cold medicine.",
+    "price": 10.99,
+    "image": "https://i.imgur.com/563l58s.jpg",
+    "category": "Cough and Cold"
+  },
+  {
+    "id": 18,
+    "name": "Singulair",
+    "description": "Prescription allergy medication.",
+    "price": 15.99,
+    "image": "https://i.imgur.com/a596200.jpg",
+    "category": "Allergies"
+  },
+  {
+    "id": 19,
+    "name": "Advair",
+    "description": "Prescription asthma medication.",
+    "price": 29.99,
+    "image": "https://i.imgur.com/u4y5a15.jpg",
+    "category": "Asthma"
+  },
+  {
+    "id": 20,
+    "name": "Flonase",
+    "description": "Prescription nasal spray for allergies.",
+    "price": 25.99,
+    "image": "https://i.imgur.com/u07105e.jpg",
+    "category": "Allergies"
+  },
+  {
+    "id": 21,
+    "name": "Metformin",
+    "description": "Prescription medication for diabetes.",
+    "price": 19.99,
+    "image": "https://i.imgur.com/k2t9r12.jpg",
+    "category": "Diabetes"
+  },
+  {
+    "id": 22,
+    "name": "Insulin",
+    "description": "Prescription medication for diabetes.",
+    "price": 29.99,
+    "image": "https://i.imgur.com/n882w2c.jpg",
+    "category": "Diabetes"
+  },
+  {
+    "id": 23,
+    "name": "Lipitor",
+    "description": "Prescription medication for high cholesterol.",
+    "price": 34.99,
+    "image": "https://i.imgur.com/3kY3h03.jpg",
+    "category": "High Cholesterol"
+  },
+  {
+    "id": 24,
+    "name": "Zocor",
+    "description": "Prescription medication for high cholesterol.",
+    "price": 32.99,
+    "image": "https://i.imgur.com/75g7Y9r.jpg",
+    "category": "High Cholesterol"
+  },
+  {
+    "id": 25,
+    "name": "Prilosec OTC",
+    "description": "Over-the-counter heartburn medication.",
+    "price": 15.99,
+    "image": "https://i.imgur.com/sZ2f7Q9.jpg",
+    "category": "Heartburn"
+  },
+  {
+    "id": 26,
+    "name": "Pepcid Complete",
+    "description": "Over-the-counter heartburn and acid reflux medication.",
+    "price": 14.99,
+    "image": "https://i.imgur.com/a2e073r.jpg",
+    "category": "Heartburn"
+  },
+  {
+    "id": 27,
+    "name": "Zantac 75",
+    "description": "Over-the-counter heartburn medication.",
+    "price": 13.99,
+    "image": "https://i.imgur.com/t3v5vQJ.jpg",
+    "category": "Heartburn"
+  },
+  {
+    "id": 28,
+    "name": "Estradiol",
+    "description": "Prescription medication for menopause.",
+    "price": 25.99,
+    "image": "https://i.imgur.com/5m90w1t.jpg",
+    "category": "Menopause"
+  },
+  {
+    "id": 29,
+    "name": "Progesterone",
+    "description": "Prescription medication for menopause.",
+    "price": 23.99,
+    "image": "https://i.imgur.com/3k6y85d.jpg",
+    "category": "Menopause"
+  },
+  {
+    "id": 30,
+    "name": "Levothyroxine",
+    "description": "Prescription medication for hypothyroidism.",
+    "price": 18.99,
+    "image": "https://i.imgur.com/6k5m472.jpg",
+    "category": "Hypothyroidism"
+  },
+  {
+    "id": 31,
+    "name": "Warfarin",
+    "description": "Prescription medication for blood thinners.",
+    "price": 22.99,
+    "image": "https://i.imgur.com/4uX86yB.jpg",
+    "category": "Blood Thinners"
+  },
+  {
+    "id": 32,
+    "name": "Aspirin",
+    "description": "Over-the-counter pain reliever and blood thinner.",
+    "price": 7.99,
+    "image": "https://i.imgur.com/u3q321Y.jpg",
+    "category": "Pain Relief"
+  },
+  {
+    "id": 33,
+    "name": "Imotrex",
+    "description": "Prescription medication for migraine headaches.",
+    "price": 39.99,
+    "image": "https://i.imgur.com/6f998qW.jpg",
+    "category": "Migraines"
+  },
+  {
+    "id": 34,
+    "name": "Topamax",
+    "description": "Prescription medication for migraine headaches and epilepsy.",
+    "price": 29.99,
+    "image": "https://i.imgur.com/j46a2z7.jpg",
+    "category": "Migraines"
+  },
+  {
+    "id": 35,
+    "name": "Zoloft",
+    "description": "Prescription medication for depression and anxiety.",
+    "price": 27.99,
+    "image": "https://i.imgur.com/q7yt06y.jpg",
+    "category": "Depression"
+  },
+  {
+    "id": 36,
+    "name": "Prozac",
+    "description": "Prescription medication for depression and anxiety.",
+    "price": 25.99,
+    "image": "https://i.imgur.com/y35509c.jpg",
+    "category": "Depression"
+  },
+  {
+    "id": 37,
+    "name": "Ativan",
+    "description": "Prescription medication for anxiety.",
+    "price": 23.99,
+    "image": "https://i.imgur.com/i74817i.jpg",
+    "category": "Anxiety"
+  },
+  {
+    "id": 38,
+    "name": "Xanax",
+    "description": "Prescription medication for anxiety.",
+    "price": 21.99,
+    "image": "https://i.imgur.com/740t479.jpg",
+    "category": "Anxiety"
+  },
+  {
+    "id": 39,
+    "name": "Ritalin",
+    "description": "Prescription medication for attention deficit hyperactivity disorder (ADHD).",
+    "price": 29.99,
+    "image": "https://i.imgur.com/0u98y4e.jpg",
+    "category": "ADHD"
+  },
+  {
+    "id": 40,
+    "name": "Adderall",
+    "description": "Prescription medication for attention deficit hyperactivity disorder (ADHD).",
+    "price": 31.99,
+    "image": "https://i.imgur.com/5131557.jpg",
+    "category": "ADHD"
+  }
+]
