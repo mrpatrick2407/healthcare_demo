@@ -69,7 +69,7 @@ public class LoginController {
 		MedicalProducts[] medical = null;
 		
 		try {
-			medical= obj.readValue(new File("C:\\Users\\Itsus\\Downloads\\healthcare (1)\\healthcare\\src\\main\\resources\\static\\medical.json"),MedicalProducts[].class);
+			medical= obj.readValue(new File("src/main/resources/static/medical.json"),MedicalProducts[].class);
 			 for (MedicalProducts product : medical) {
 	                // Replace "image" field with a specific value (e.g., "new_image_value.jpg")
 	                product.setImage("https://medlineplus.gov/images/Medicines.jpg");
